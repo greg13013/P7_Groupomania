@@ -1,0 +1,123 @@
+.cardPerso{
+    border: 2px solid $couleurGris;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 8px;
+
+}
+
+.cardPost{
+    transition: box-shadow 300ms ease-in-out;
+    margin: 16px;
+    &:hover{
+        box-shadow: 0px 0px 20px 10px;
+        transition: box-shadow 300ms ease-in-out;
+    }
+}
+
+.card-img-user{
+    position: absolute;
+    left: -35px;
+    top: -25px;
+    width: 70px;
+    @include responsive(mobile){
+        left: -25px;
+        top: -15px;
+        width: 50px;
+    }
+}
+
+.card-likeDislike{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    .marginLike{
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .disabledIcon{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.card-titre{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-header{
+    border-bottom: 2px solid $couleurGris;
+    img{
+        margin: 16px;
+    }
+}
+
+.card-contenu{
+    white-space: break-spaces;
+    margin: 16px;
+}
+
+.card-created{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+.card-updated{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+.commentaire{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $couleurGris;
+    padding: 14px;
+    position: relative;
+    img{
+        width: 50px;
+        margin: 5px;
+    }
+    .commentaire-footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    }
+
+    .commentaire-delete{
+        cursor: pointer;
+    position: absolute;
+    right: 0;
+    }
+}
+
+.btnAjoutCommentaire{
+    border: 1px solid $couleurGris;
+    box-shadow: 0px 0px 10px 5px $couleurGris;
+    border-radius: 16px;
+    padding: 8px;
+    cursor: pointer;
+    .fa-solid{
+        margin: 6px;
+    }
+}
+
+.collapseCommentaire{
+    margin-bottom: 45px;
+    border: 1px solid $couleurGris !important;
+    .collapsible-header{
+        background-color: transparent !important;
+        border-bottom: none !important
+    }
+    .collapsible-body{
+        border-bottom: none !important
+    }
+}

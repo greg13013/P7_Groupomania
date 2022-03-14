@@ -1,0 +1,25 @@
+.formCreerCompte, .formLogin{
+    display: flex;
+    flex-direction: column;
+}
+
+.formCreerPost{
+    padding: 2rem !important;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+}
+
+.ui{
+    .input{
+        margin: 1rem;
+        flex-direction: column;
+    }
+}

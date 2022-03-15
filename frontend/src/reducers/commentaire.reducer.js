@@ -1,4 +1,5 @@
 import { CREATE_COMMENTAIRE, DELETE_COMMENTAIRE, GET_COMMENTAIRE } from "../actions/commentaire.actions";
+import { LOGOUT } from "../actions/user.actions";
 
 const initialState = [];
 
@@ -36,6 +37,8 @@ export default function commentaireReducer(state = initialState, action){
             return state.map(array => {
                 return array.filter((commentaire) => commentaire.id !== action.payload.commentaireId);
             })
+        case LOGOUT:
+            return initialState
         default:
             return state
     }
